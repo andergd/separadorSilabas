@@ -85,11 +85,21 @@ def silabas(word, sep='-'):
                 continue
             elif estructura[j+1] == 'O':
                 if estructura[j+2] in 'AIL':
+                    if letras[j+1] == 'd' and letras[j+2] == 'l':
+                        salida.append(silaba + letras[j+1])
+                        silaba = ''
+                        j += 2
+                        continue
                     salida.append(silaba)
                     silaba = ''
                     j+=1
                     continue
                 else:
+                    if letras[j+2] == 's' and estructura[j+3] in 'LCO':
+                        salida.append(silaba + letras[j+1] + letras[j+2])
+                        silaba = ''
+                        j += 3
+                        continue
                     salida.append(silaba + letras[j+1])
                     silaba = ''
                     j += 2
@@ -102,6 +112,11 @@ def silabas(word, sep='-'):
                         j+=1
                         continue
                     else:
+                        if letras[j+2] == 's' and estructura[j+3] in 'LCO':
+                            salida.append(silaba + letras[j+1] + letras[j+2])
+                            silaba = ''
+                            j += 3
+                            continue
                         salida.append(silaba + letras[j+1])
                         silaba = ''
                         j += 2
@@ -117,11 +132,21 @@ def silabas(word, sep='-'):
                 continue
             elif estructura[j+1] == 'O':
                 if estructura[j+2] in 'AIL':
+                    if letras[j+1] == 'd' and letras[j+2] == 'l':
+                        salida.append(silaba + letras[j+1])
+                        silaba = ''
+                        j += 2
+                        continue
                     salida.append(silaba)
                     silaba = ''
                     j+=1
                     continue
                 else:
+                    if letras[j+2] == 's' and estructura[j+3] in 'LCO':
+                        salida.append(silaba + letras[j+1] + letras[j+2])
+                        silaba = ''
+                        j += 3
+                        continue
                     salida.append(silaba + letras[j+1])
                     silaba = ''
                     j += 2
@@ -134,6 +159,11 @@ def silabas(word, sep='-'):
                         j+=1
                         continue
                     else:
+                        if letras[j+2] == 's' and estructura[j+3] in 'LCO':
+                            salida.append(silaba + letras[j+1] + letras[j+2])
+                            silaba = ''
+                            j += 3
+                            continue
                         salida.append(silaba + letras[j+1])
                         silaba = ''
                         j += 2
@@ -160,21 +190,10 @@ def silabas(word, sep='-'):
                 if letras[j+1] == '':
                     salida.append(silaba)
                     break
+                elif letras[j+1] == 's':
+                    salida.append(silaba)
+                    silaba = ''
+                    j+=1
+                    continue
                 raise TypeError("Estructura de sílaba incorrecta en la palabra {0}".format(word))
     return '-'.join(salida)
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
