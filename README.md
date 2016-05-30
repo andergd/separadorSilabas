@@ -11,6 +11,7 @@ NOTA: No distingue los prefijos "sub", "sus"... para diferenciar sílabas.
 Por ejemplo, "subrayar" la separará como "su-bra-yar".
 
 ======= Método de uso =======
+
 Importando la función con la siguiente línea de código:
 
 from separadorSilabas import silabas as silabas
@@ -32,6 +33,7 @@ NOTE: It does not distinguish syllables commencing by prefixes such as "sub" or 
 As an example, the word "subrayar" will return the string "su-bra-yar".
 
 ======= Instructions =======
+
 Import the function using the following code line:
 
 from separadorSilabas import silabas as silabas
