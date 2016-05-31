@@ -4,7 +4,7 @@ def silabas(word, sep='-'):
     No introducir signos de puntuación."""
     word = word.lower()
     l = ['r','l']
-    o = ['p','b','v','f','t','d','c','k','g']
+    o = ['p','b','f','t','d','c','k','g']
     c = ['b','c','ch','d','f','g','h','j','k','l','ll','m','n','ñ','p','q','r','rr','s','t','v','x','y','z']
     a = ['a','e','o','á','é','ó','í','ú']
     i = ['i','u','ü']
@@ -12,6 +12,27 @@ def silabas(word, sep='-'):
     estructura = ''
     j = 0
     while j < len(word):
+        if j == 0:
+            if word[j] == 'p' and word[j+1] == 's':
+                letras.append('ps')
+                estructura += 'C'
+                j += 2
+                continue
+            elif word[j] == 'p' and word[j+1] == 'n':
+                letras.append('pn')
+                estructura += 'C'
+                j += 2
+                continue
+            elif word[j] == 'p' and word[j+1] == 't':
+                letras.append('pt')
+                estructura += 'C'
+                j += 2
+                continue
+            elif word[j] == 'g' and word[j+1] == 'n':
+                letras.append('gn')
+                estructura += 'C'
+                j += 2
+                continue
         if j < len(word) - 1:
             if word[j] == 'c' and word[j+1] == 'h':
                 letras.append('ch')
