@@ -196,4 +196,4 @@ def silabas(word, sep='-'):
                     j+=1
                     continue
                 raise TypeError("Estructura de sílaba incorrecta en la palabra {0}".format(word))
-    return '-'.join(salida)
+    return sep.join(salida)
