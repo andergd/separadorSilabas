@@ -49,16 +49,6 @@ def silabas(word, sep='-'):
                 estructura += 'C'
                 j += 2
                 continue
-            elif word[j] == 'c' and (word[j+1] == 'e' or word[j+1] == 'i'):
-                letras.append('c')
-                estructura += 'C'
-                j += 1
-                continue
-            elif word[j] == 'g' and (word[j+1] == 'e' or word[j+1] == 'i'):
-                letras.append('g')
-                estructura += 'C'
-                j += 1
-                continue
         if word[j] in a:
             letras.append(word[j])
             estructura += 'A'
